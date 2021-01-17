@@ -355,3 +355,147 @@ aws_security_group.web: Modifications complete after 10s [id=sg-03abe64e154f6ad5
 
 Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
 bharathkumarraju@R77-NB193 Demo2 %
+
+
+bharathkumarraju@R77-NB193 Demo2 % terraform plan
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+
+aws_security_group.web: Refreshing state... [id=sg-03abe64e154f6ad5a]
+aws_instance.web: Refreshing state... [id=i-025275add796f3a4b]
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # aws_instance.web must be replaced
+-/+ resource "aws_instance" "web" {
+        ami                          = "ami-00b8d9cb8a7161e41"
+      ~ arn                          = "arn:aws:ec2:ap-southeast-1:172586632398:instance/i-025275add796f3a4b" -> (known after apply)
+      ~ associate_public_ip_address  = true -> (known after apply)
+      ~ availability_zone            = "ap-southeast-1c" -> (known after apply)
+      ~ cpu_core_count               = 1 -> (known after apply)
+      ~ cpu_threads_per_core         = 2 -> (known after apply)
+      - disable_api_termination      = false -> null
+      - ebs_optimized                = false -> null
+        get_password_data            = false
+      - hibernation                  = false -> null
+      + host_id                      = (known after apply)
+      ~ id                           = "i-025275add796f3a4b" -> (known after apply)
+      ~ instance_state               = "running" -> (known after apply)
+        instance_type                = "t3.micro"
+      ~ ipv6_address_count           = 0 -> (known after apply)
+      ~ ipv6_addresses               = [] -> (known after apply)
+      + key_name                     = (known after apply)
+      - monitoring                   = false -> null
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      ~ primary_network_interface_id = "eni-041a9842a43a1ce79" -> (known after apply)
+      ~ private_dns                  = "ip-172-31-46-159.ap-southeast-1.compute.internal" -> (known after apply)
+      ~ private_ip                   = "172.31.46.159" -> (known after apply)
+      ~ public_dns                   = "ec2-18-141-169-160.ap-southeast-1.compute.amazonaws.com" -> (known after apply)
+      ~ public_ip                    = "18.141.169.160" -> (known after apply)
+      ~ secondary_private_ips        = [] -> (known after apply)
+      ~ security_groups              = [
+          - "webserver-SG",
+        ] -> (known after apply)
+        source_dest_check            = true
+      ~ subnet_id                    = "subnet-074c7a41" -> (known after apply)
+        tags                         = {
+            "Name"  = "Web server built by terraform"
+            "Owner" = "Bharath raju"
+        }
+      ~ tenancy                      = "default" -> (known after apply)
+      ~ user_data                    = "71d9b2246a2b0707209b30b2deace6c69008af03" -> "0fd669f554aec95212e607528c9f6e42d18313a2" # forces replacement
+        vpc_security_group_ids       = [
+            "sg-03abe64e154f6ad5a",
+        ]
+
+      - credit_specification {
+          - cpu_credits = "unlimited" -> null
+        }
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      ~ enclave_options {
+          ~ enabled = false -> (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      ~ metadata_options {
+          ~ http_endpoint               = "enabled" -> (known after apply)
+          ~ http_put_response_hop_limit = 1 -> (known after apply)
+          ~ http_tokens                 = "optional" -> (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      ~ root_block_device {
+          ~ delete_on_termination = true -> (known after apply)
+          ~ device_name           = "/dev/xvda" -> (known after apply)
+          ~ encrypted             = false -> (known after apply)
+          ~ iops                  = 100 -> (known after apply)
+          + kms_key_id            = (known after apply)
+          ~ tags                  = {} -> (known after apply)
+          ~ throughput            = 0 -> (known after apply)
+          ~ volume_id             = "vol-0831de68c1bd0116d" -> (known after apply)
+          ~ volume_size           = 8 -> (known after apply)
+          ~ volume_type           = "gp2" -> (known after apply)
+        }
+    }
+
+Plan: 1 to add, 0 to change, 1 to destroy.
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+
+bharathkumarraju@R77-NB193 Demo2 % terraform apply -auto-approve
+aws_security_group.web: Refreshing state... [id=sg-03abe64e154f6ad5a]
+aws_instance.web: Refreshing state... [id=i-025275add796f3a4b]
+aws_instance.web: Destroying... [id=i-025275add796f3a4b]
+aws_instance.web: Still destroying... [id=i-025275add796f3a4b, 10s elapsed]
+aws_instance.web: Still destroying... [id=i-025275add796f3a4b, 20s elapsed]
+aws_instance.web: Still destroying... [id=i-025275add796f3a4b, 30s elapsed]
+aws_instance.web: Still destroying... [id=i-025275add796f3a4b, 40s elapsed]
+aws_instance.web: Still destroying... [id=i-025275add796f3a4b, 50s elapsed]
+aws_instance.web: Still destroying... [id=i-025275add796f3a4b, 1m0s elapsed]
+aws_instance.web: Still destroying... [id=i-025275add796f3a4b, 1m10s elapsed]
+aws_instance.web: Destruction complete after 1m12s
+aws_instance.web: Creating...
+aws_instance.web: Still creating... [10s elapsed]
+aws_instance.web: Creation complete after 14s [id=i-033d43ae3d9a7738d]
+
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
+bharathkumarraju@R77-NB193 Demo2 %
+
+
