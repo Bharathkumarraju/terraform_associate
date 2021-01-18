@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_instance" "web" {
   ami = "ami-00b8d9cb8a7161e41" //amazon linux
-  instance_type = "t2.small"
+  instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.web.id]
   user_data = templatefile("user_data.sh.tpl",{
     first_name = "bharath"

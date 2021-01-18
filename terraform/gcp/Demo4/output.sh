@@ -280,3 +280,24 @@ Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
 bharathkumarraju@R77-NB193 Demo4 %
 
 
+bharathkumarraju@R77-NB193 Demo4 % terraform destroy -auto-approve
+google_project_service.api["cloudresourcemanager.googleapis.com"]: Refreshing state... [id=srianjaneyam/cloudresourcemanager.googleapis.com]
+google_project_service.api["compute.googleapis.com"]: Refreshing state... [id=srianjaneyam/compute.googleapis.com]
+google_compute_firewall.web: Refreshing state... [id=projects/srianjaneyam/global/firewalls/web-access]
+google_compute_instance.bk_server: Refreshing state... [id=projects/srianjaneyam/zones/asia-southeast1-c/instances/bharath-gce-server]
+google_compute_instance.bk_server: Destroying... [id=projects/srianjaneyam/zones/asia-southeast1-c/instances/bharath-gce-server]
+google_compute_instance.bk_server: Still destroying... [id=projects/srianjaneyam/zones/asia-southeast1-c/instances/bharath-gce-server, 10s elapsed]
+google_compute_instance.bk_server: Still destroying... [id=projects/srianjaneyam/zones/asia-southeast1-c/instances/bharath-gce-server, 20s elapsed]
+google_compute_instance.bk_server: Destruction complete after 22s
+google_project_service.api["compute.googleapis.com"]: Destroying... [id=srianjaneyam/compute.googleapis.com]
+google_project_service.api["cloudresourcemanager.googleapis.com"]: Destroying... [id=srianjaneyam/cloudresourcemanager.googleapis.com]
+google_compute_firewall.web: Destroying... [id=projects/srianjaneyam/global/firewalls/web-access]
+google_project_service.api["compute.googleapis.com"]: Destruction complete after 0s
+google_project_service.api["cloudresourcemanager.googleapis.com"]: Destruction complete after 0s
+google_compute_firewall.web: Still destroying... [id=projects/srianjaneyam/global/firewalls/web-access, 10s elapsed]
+google_compute_firewall.web: Destruction complete after 12s
+
+Destroy complete! Resources: 4 destroyed.
+bharathkumarraju@R77-NB193 Demo4 %
+
+
