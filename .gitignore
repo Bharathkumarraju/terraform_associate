@@ -1,6 +1,6 @@
 # Local .terraform directories
 #GCP SA account file basically it is GCP credentials
-terraform/gcp/account.json
+*account.json
 
 *.idea/
 **/.terraform/*
