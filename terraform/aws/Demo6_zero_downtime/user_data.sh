@@ -11,7 +11,7 @@ WebServer with Static IP! <br>
 <br>
 PrivateIP: $MYIP
 <p>
-<font color="blue">Version 4.0</font>
+<font color="blue">Version 5.0</font>
 </html>
 EOF
 
