@@ -177,4 +177,3 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 bharathkumarraju@R77-NB193 Demo3 %
 
 Hit Browser with public IP of instance like http://13.251.124.52/
-
