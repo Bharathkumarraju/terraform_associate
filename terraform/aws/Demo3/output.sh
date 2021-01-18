@@ -286,3 +286,21 @@ aws_instance.web: Modifications complete after 1m0s [id=i-039e0c199fdfd3476]
 
 Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
 bharathkumarraju@R77-NB193 Demo3 %
+
+
+bharathkumarraju@R77-NB193 terraform % cd aws/Demo3
+bharathkumarraju@R77-NB193 Demo3 % terraform destroy -auto-approve
+aws_security_group.web: Refreshing state... [id=sg-062d3f4acdfa68eeb]
+aws_instance.web: Refreshing state... [id=i-039e0c199fdfd3476]
+aws_instance.web: Destroying... [id=i-039e0c199fdfd3476]
+aws_instance.web: Still destroying... [id=i-039e0c199fdfd3476, 10s elapsed]
+aws_instance.web: Still destroying... [id=i-039e0c199fdfd3476, 20s elapsed]
+aws_instance.web: Still destroying... [id=i-039e0c199fdfd3476, 30s elapsed]
+aws_instance.web: Still destroying... [id=i-039e0c199fdfd3476, 40s elapsed]
+aws_instance.web: Still destroying... [id=i-039e0c199fdfd3476, 50s elapsed]
+aws_instance.web: Destruction complete after 51s
+aws_security_group.web: Destroying... [id=sg-062d3f4acdfa68eeb]
+aws_security_group.web: Destruction complete after 1s
+
+Destroy complete! Resources: 2 destroyed.
+bharathkumarraju@R77-NB193 Demo3 %
