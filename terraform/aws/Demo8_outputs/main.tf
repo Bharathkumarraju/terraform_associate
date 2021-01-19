@@ -62,7 +62,27 @@ output "bharath_sg_id" {
   value = aws_security_group.general.id
 }
 
-output "bharath_sg_all_details" {
+/*output "bharath_sg_all_details" {
   description = "all details of SG"
   value = aws_security_group.general
+} */
+
+output "web_ip" {
+  value = aws_instance.web.private_ip
+}
+
+output "app_ip" {
+  value = aws_instance.app.private_ip
+}
+
+output "db_ip" {
+  value = aws_instance.db.private_ip
+}
+
+output "list_all_instance_ids" {
+  value = [
+    aws_instance.web.id,
+    aws_instance.app.id,
+    aws_instance.db.id
+  ]
 }
