@@ -169,3 +169,65 @@ web_and_app_instance_ids = [
 web_instance_id = "i-059c691ffefd0fc84"
 bharathkumarraju@R77-NB193 Demo21_terraform_loops_for_each %
 
+
+
+bharathkumarraju@R77-NB193 Demo21_terraform_loops_for-each % terraform destroy -auto-approve
+aws_iam_user.user["raju17@bharathkumaraju.com"]: Destroying... [id=raju17@bharathkumaraju.com]
+aws_iam_user.user["raju12@bharathkumaraju.com"]: Destroying... [id=raju12@bharathkumaraju.com]
+aws_iam_user.user["raju15@bharathkumaraju.com"]: Destroying... [id=raju15@bharathkumaraju.com]
+aws_iam_user.user["raju16@bharathkumaraju.com"]: Destroying... [id=raju16@bharathkumaraju.com]
+aws_iam_user.user["raju14@bharathkumaraju.com"]: Destroying... [id=raju14@bharathkumaraju.com]
+aws_iam_user.user["raju19@bharathkumaraju.com"]: Destroying... [id=raju19@bharathkumaraju.com]
+aws_instance.bharath_server["Staging"]: Destroying... [id=i-092182e75ea12f82d]
+aws_instance.bharath_server["Dev"]: Destroying... [id=i-0f418d45f6240d45c]
+aws_instance.server["web"]: Destroying... [id=i-059c691ffefd0fc84]
+aws_instance.bastion_server["bastion"]: Destroying... [id=i-0fa444b805b624b69]
+aws_iam_user.user["raju12@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["raju14@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["raju17@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["raju15@bharathkumaraju.com"]: Destruction complete after 2s
+aws_instance.server["app"]: Destroying... [id=i-06cdf34a94614757d]
+aws_instance.bharath_server["Prod"]: Destroying... [id=i-0dfb498602d2f11bb]
+aws_iam_user.user["raju19@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["raju18@bharathkumaraju.com"]: Destroying... [id=raju18@bharathkumaraju.com]
+aws_iam_user.user["raju13@bharathkumaraju.com"]: Destroying... [id=raju13@bharathkumaraju.com]
+aws_iam_user.user["raju16@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["raju18@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["raju13@bharathkumaraju.com"]: Destruction complete after 2s
+aws_instance.bharath_server["Staging"]: Still destroying... [id=i-092182e75ea12f82d, 10s elapsed]
+aws_instance.server["web"]: Still destroying... [id=i-059c691ffefd0fc84, 10s elapsed]
+aws_instance.bharath_server["Dev"]: Still destroying... [id=i-0f418d45f6240d45c, 10s elapsed]
+aws_instance.bastion_server["bastion"]: Still destroying... [id=i-0fa444b805b624b69, 10s elapsed]
+aws_instance.server["app"]: Still destroying... [id=i-06cdf34a94614757d, 10s elapsed]
+aws_instance.bharath_server["Prod"]: Still destroying... [id=i-0dfb498602d2f11bb, 10s elapsed]
+aws_instance.server["web"]: Still destroying... [id=i-059c691ffefd0fc84, 20s elapsed]
+aws_instance.bharath_server["Staging"]: Still destroying... [id=i-092182e75ea12f82d, 20s elapsed]
+aws_instance.bharath_server["Dev"]: Still destroying... [id=i-0f418d45f6240d45c, 20s elapsed]
+aws_instance.bastion_server["bastion"]: Still destroying... [id=i-0fa444b805b624b69, 20s elapsed]
+aws_instance.server["app"]: Still destroying... [id=i-06cdf34a94614757d, 20s elapsed]
+aws_instance.bharath_server["Prod"]: Still destroying... [id=i-0dfb498602d2f11bb, 20s elapsed]
+aws_instance.bastion_server["bastion"]: Still destroying... [id=i-0fa444b805b624b69, 30s elapsed]
+aws_instance.server["web"]: Still destroying... [id=i-059c691ffefd0fc84, 30s elapsed]
+aws_instance.bharath_server["Dev"]: Still destroying... [id=i-0f418d45f6240d45c, 30s elapsed]
+aws_instance.bharath_server["Staging"]: Still destroying... [id=i-092182e75ea12f82d, 30s elapsed]
+aws_instance.bharath_server["Dev"]: Destruction complete after 30s
+aws_instance.server["app"]: Destruction complete after 30s
+aws_instance.bharath_server["Prod"]: Still destroying... [id=i-0dfb498602d2f11bb, 30s elapsed]
+aws_instance.bastion_server["bastion"]: Still destroying... [id=i-0fa444b805b624b69, 40s elapsed]
+aws_instance.bharath_server["Staging"]: Still destroying... [id=i-092182e75ea12f82d, 40s elapsed]
+aws_instance.server["web"]: Still destroying... [id=i-059c691ffefd0fc84, 40s elapsed]
+aws_instance.bharath_server["Prod"]: Still destroying... [id=i-0dfb498602d2f11bb, 40s elapsed]
+aws_instance.server["web"]: Still destroying... [id=i-059c691ffefd0fc84, 50s elapsed]
+aws_instance.bharath_server["Staging"]: Still destroying... [id=i-092182e75ea12f82d, 50s elapsed]
+aws_instance.bastion_server["bastion"]: Still destroying... [id=i-0fa444b805b624b69, 50s elapsed]
+aws_instance.bharath_server["Prod"]: Still destroying... [id=i-0dfb498602d2f11bb, 50s elapsed]
+aws_instance.bharath_server["Prod"]: Destruction complete after 50s
+aws_instance.server["web"]: Still destroying... [id=i-059c691ffefd0fc84, 1m0s elapsed]
+aws_instance.bharath_server["Staging"]: Still destroying... [id=i-092182e75ea12f82d, 1m0s elapsed]
+aws_instance.bastion_server["bastion"]: Still destroying... [id=i-0fa444b805b624b69, 1m0s elapsed]
+aws_instance.bharath_server["Staging"]: Destruction complete after 1m0s
+aws_instance.bastion_server["bastion"]: Destruction complete after 1m0s
+aws_instance.server["web"]: Destruction complete after 1m0s
+
+Destroy complete! Resources: 14 destroyed.
+bharathkumarraju@R77-NB193 Demo21_terraform_loops_for-each %

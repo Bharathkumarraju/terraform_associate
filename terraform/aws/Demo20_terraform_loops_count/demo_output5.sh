@@ -181,3 +181,4 @@ aws_instance.servers[0]: Destruction complete after 1m0s
 
 Destroy complete! Resources: 9 destroyed.
 bharathkumarraju@R77-NB193 Demo20_terraform_loops_count %
+
