@@ -10,9 +10,9 @@ variable "aws_users" {
     "raju13@bharathkumaraju.com",
     "raju12@bharathkumaraju.com",
     "roopa",
-    "Gabrile",
+    "Gabri",
     "Brice",
-    "jinpie"
+    "jinp"
   ]
 }
 

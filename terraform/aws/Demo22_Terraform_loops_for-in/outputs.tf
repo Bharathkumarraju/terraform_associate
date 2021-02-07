@@ -21,3 +21,26 @@ output "server_id_map" {
     x.id => x.public_ip
   }
 }
+
+output "users_unique_id_arn" {
+  value = [
+  for user in aws_iam_user.user:
+  "UserID: ${user.unique_id} has ARN: ${user.arn}"
+  ]
+}
+
+output "users_unique_id_name_map" {
+  value = {
+    for user in aws_iam_user.user:
+    user.unique_id  =>  user.name
+  }
+}
+
+
+output "users_unique_id_name_custom" {
+  value = {
+    for user in aws_iam_user.user:
+    user.unique_id  =>  user.name
+    if length(user.name) < 7
+  }
+}
