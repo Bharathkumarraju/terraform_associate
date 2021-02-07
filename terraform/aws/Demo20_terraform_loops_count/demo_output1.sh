@@ -370,4 +370,30 @@ aws_instance.servers[3]: Creation complete after 16s [id=i-0648fff087da3f43f]
 Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
 bharathkumarraju@R77-NB193 Demo20_terraform_loops_count %
 
+bharathkumarraju@R77-NB193 Demo20_terraform_loops_count % terraform apply -auto-approve
+aws_instance.servers[2]: Refreshing state... [id=i-035ac6d6afb0f1129]
+aws_instance.servers[0]: Refreshing state... [id=i-0f57768bb02789f93]
+aws_instance.servers[1]: Refreshing state... [id=i-07ad1fbd197e29d26]
+aws_instance.servers[3]: Refreshing state... [id=i-0648fff087da3f43f]
+
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+instance_ids = [
+  "i-0f57768bb02789f93",
+  "i-07ad1fbd197e29d26",
+  "i-035ac6d6afb0f1129",
+  "i-0648fff087da3f43f",
+]
+instance_public_ips = [
+  "13.212.245.247",
+  "54.179.77.110",
+  "13.212.213.96",
+  "54.179.159.234",
+]
+bharathkumarraju@R77-NB193 Demo20_terraform_loops_count %
+
+
+
 
