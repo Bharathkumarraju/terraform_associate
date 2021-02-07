@@ -64,5 +64,3 @@ output "bk_vpc" {
   value = data.aws_vpc.bk_vpc.id
 }
 
-
-
