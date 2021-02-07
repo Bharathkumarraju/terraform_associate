@@ -141,3 +141,43 @@ instance_public_ips = [
   "54.179.159.234",
 ]
 bharathkumarraju@R77-NB193 Demo20_terraform_loops_count %
+
+
+
+bharathkumarraju@R77-NB193 Demo20_terraform_loops_count % terraform destroy -auto-approve
+aws_iam_user.user[0]: Destroying... [id=raju15@bharathkumaraju.com]
+aws_iam_user.user[1]: Destroying... [id=raju14@bharathkumaraju.com]
+aws_iam_user.user[4]: Destroying... [id=raju11@bharathkumaraju.com]
+aws_iam_user.user[3]: Destroying... [id=raju12@bharathkumaraju.com]
+aws_iam_user.user[2]: Destroying... [id=raju13@bharathkumaraju.com]
+aws_instance.servers[3]: Destroying... [id=i-0648fff087da3f43f]
+aws_instance.servers[0]: Destroying... [id=i-0f57768bb02789f93]
+aws_instance.servers[2]: Destroying... [id=i-035ac6d6afb0f1129]
+aws_instance.servers[1]: Destroying... [id=i-07ad1fbd197e29d26]
+aws_iam_user.user[1]: Destruction complete after 2s
+aws_iam_user.user[0]: Destruction complete after 2s
+aws_iam_user.user[3]: Destruction complete after 2s
+aws_iam_user.user[2]: Destruction complete after 2s
+aws_iam_user.user[4]: Destruction complete after 2s
+aws_instance.servers[3]: Still destroying... [id=i-0648fff087da3f43f, 10s elapsed]
+aws_instance.servers[0]: Still destroying... [id=i-0f57768bb02789f93, 10s elapsed]
+aws_instance.servers[2]: Still destroying... [id=i-035ac6d6afb0f1129, 10s elapsed]
+aws_instance.servers[1]: Still destroying... [id=i-07ad1fbd197e29d26, 10s elapsed]
+aws_instance.servers[1]: Destruction complete after 19s
+aws_instance.servers[2]: Still destroying... [id=i-035ac6d6afb0f1129, 20s elapsed]
+aws_instance.servers[0]: Still destroying... [id=i-0f57768bb02789f93, 20s elapsed]
+aws_instance.servers[3]: Still destroying... [id=i-0648fff087da3f43f, 20s elapsed]
+aws_instance.servers[3]: Destruction complete after 29s
+aws_instance.servers[2]: Still destroying... [id=i-035ac6d6afb0f1129, 30s elapsed]
+aws_instance.servers[0]: Still destroying... [id=i-0f57768bb02789f93, 30s elapsed]
+aws_instance.servers[2]: Still destroying... [id=i-035ac6d6afb0f1129, 40s elapsed]
+aws_instance.servers[0]: Still destroying... [id=i-0f57768bb02789f93, 40s elapsed]
+aws_instance.servers[2]: Still destroying... [id=i-035ac6d6afb0f1129, 50s elapsed]
+aws_instance.servers[0]: Still destroying... [id=i-0f57768bb02789f93, 50s elapsed]
+aws_instance.servers[0]: Still destroying... [id=i-0f57768bb02789f93, 1m0s elapsed]
+aws_instance.servers[2]: Still destroying... [id=i-035ac6d6afb0f1129, 1m0s elapsed]
+aws_instance.servers[2]: Destruction complete after 1m0s
+aws_instance.servers[0]: Destruction complete after 1m0s
+
+Destroy complete! Resources: 9 destroyed.
+bharathkumarraju@R77-NB193 Demo20_terraform_loops_count %
