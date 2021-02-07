@@ -5,6 +5,7 @@
 *.idea/
 **/.terraform/*
 **/*.hcl
+**/*.pem
 # .tfstate files
 *.tfstate
 *.tfstate.*
