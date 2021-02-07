@@ -4,7 +4,7 @@
 
 *.idea/
 **/.terraform/*
-
+**/*.hcl
 # .tfstate files
 *.tfstate
 *.tfstate.*
