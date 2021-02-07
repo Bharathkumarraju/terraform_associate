@@ -1,0 +1,4 @@
+raju1 raju2 raju3
+Terraform START: Mon Feb 8 02:39:59 +08 2021
+172.31.24.248
+Terraform FINISH: Mon Feb 8 02:40:15 +08 2021
