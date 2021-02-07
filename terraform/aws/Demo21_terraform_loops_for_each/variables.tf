@@ -8,7 +8,29 @@ variable "aws_users" {
     "raju15@bharathkumaraju.com",
     "raju14@bharathkumaraju.com",
     "raju13@bharathkumaraju.com",
-    "raju12@bharathkumaraju.com",
-    "raju11@bharathkumaraju.com"
+    "raju12@bharathkumaraju.com"
   ]
+}
+
+variable "server_settings" {
+  type = map(any)
+  default = {
+    web = {
+      ami = "ami-00b8d9cb8a7161e41"
+      instance_size = "t3.small"
+      root_disksize = 20
+      encrypted = true
+    }
+    app = {
+      ami = "ami-00b8d9cb8a7161e41"
+      instance_size = "t3.micro"
+      root_disksize = 10
+      encrypted = true
+    }
+  }
+}
+
+variable "create_bastion" {
+  description = "Provision Bastion YES/NO"
+  default = "YES"
 }
