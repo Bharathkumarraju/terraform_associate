@@ -1,0 +1,36 @@
+variable "aws_region" {
+  description = "Region to deploy EC2 server"
+  type        = string
+}
+
+variable "port_list" {
+  description = "list of ports to open"
+  type        = list(any)
+}
+
+
+variable "instance_size" {
+  description = "EC2 instance Size"
+  type        = string
+}
+
+variable "tags" {
+  description = "tags for AWS resources"
+  type        = map(any)
+}
+
+variable "key_pair" {
+  description = "ssh key pair"
+  type        = string
+  sensitive   = true # only works with terraform14
+}
+
+variable "password" {
+  description = "password of 10 characters"
+  type = string
+  sensitive = true
+  validation {
+    condition = length(var.password) == 10
+    error_message = "Pasword must be ten characters exactly."
+  }
+}
