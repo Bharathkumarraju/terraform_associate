@@ -174,3 +174,58 @@ users_unique_id_name_map = {
 }
 bharathkumarraju@R77-NB193 Demo22_Terraform_loops_for-in %
 
+
+bharathkumarraju@R77-NB193 Demo22_Terraform_loops_for-in % terraform destroy -auto-approve
+aws_iam_user.user["raju19@bharathkumaraju.com"]: Destroying... [id=raju19@bharathkumaraju.com]
+aws_iam_user.user["roopa"]: Destroying... [id=roopa]
+aws_iam_user.user["raju18@bharathkumaraju.com"]: Destroying... [id=raju18@bharathkumaraju.com]
+aws_iam_user.user["jinp"]: Destroying... [id=jinp]
+aws_iam_user.user["Brice"]: Destroying... [id=Brice]
+aws_iam_user.user["raju16@bharathkumaraju.com"]: Destroying... [id=raju16@bharathkumaraju.com]
+aws_iam_user.user["raju13@bharathkumaraju.com"]: Destroying... [id=raju13@bharathkumaraju.com]
+aws_iam_user.user["raju17@bharathkumaraju.com"]: Destroying... [id=raju17@bharathkumaraju.com]
+aws_instance.servers[1]: Destroying... [id=i-07963daff9ba9cda7]
+aws_instance.servers[2]: Destroying... [id=i-03213c68fdd37fc79]
+aws_iam_user.user["raju17@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["raju13@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["roopa"]: Destruction complete after 2s
+aws_iam_user.user["jinp"]: Destruction complete after 2s
+aws_iam_user.user["raju19@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["raju16@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["Gabri"]: Destroying... [id=Gabri]
+aws_instance.servers[0]: Destroying... [id=i-0dd6f8c5547141e7e]
+aws_iam_user.user["raju18@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["raju15@bharathkumaraju.com"]: Destroying... [id=raju15@bharathkumaraju.com]
+aws_iam_user.user["Brice"]: Destruction complete after 2s
+aws_iam_user.user["raju12@bharathkumaraju.com"]: Destroying... [id=raju12@bharathkumaraju.com]
+aws_instance.servers[3]: Destroying... [id=i-06d02f8059654f022]
+aws_iam_user.user["raju14@bharathkumaraju.com"]: Destroying... [id=raju14@bharathkumaraju.com]
+aws_iam_user.user["Gabri"]: Destruction complete after 2s
+aws_iam_user.user["raju12@bharathkumaraju.com"]: Destruction complete after 2s
+aws_iam_user.user["raju15@bharathkumaraju.com"]: Destruction complete after 3s
+aws_iam_user.user["raju14@bharathkumaraju.com"]: Destruction complete after 3s
+aws_instance.servers[1]: Still destroying... [id=i-07963daff9ba9cda7, 10s elapsed]
+aws_instance.servers[2]: Still destroying... [id=i-03213c68fdd37fc79, 10s elapsed]
+aws_instance.servers[0]: Still destroying... [id=i-0dd6f8c5547141e7e, 10s elapsed]
+aws_instance.servers[3]: Still destroying... [id=i-06d02f8059654f022, 10s elapsed]
+aws_instance.servers[2]: Still destroying... [id=i-03213c68fdd37fc79, 20s elapsed]
+aws_instance.servers[1]: Still destroying... [id=i-07963daff9ba9cda7, 20s elapsed]
+aws_instance.servers[0]: Still destroying... [id=i-0dd6f8c5547141e7e, 20s elapsed]
+aws_instance.servers[3]: Still destroying... [id=i-06d02f8059654f022, 20s elapsed]
+aws_instance.servers[2]: Still destroying... [id=i-03213c68fdd37fc79, 30s elapsed]
+aws_instance.servers[1]: Still destroying... [id=i-07963daff9ba9cda7, 30s elapsed]
+aws_instance.servers[0]: Still destroying... [id=i-0dd6f8c5547141e7e, 30s elapsed]
+aws_instance.servers[3]: Still destroying... [id=i-06d02f8059654f022, 30s elapsed]
+aws_instance.servers[1]: Still destroying... [id=i-07963daff9ba9cda7, 40s elapsed]
+aws_instance.servers[2]: Still destroying... [id=i-03213c68fdd37fc79, 40s elapsed]
+aws_instance.servers[2]: Destruction complete after 40s
+aws_instance.servers[0]: Still destroying... [id=i-0dd6f8c5547141e7e, 40s elapsed]
+aws_instance.servers[3]: Destruction complete after 40s
+aws_instance.servers[0]: Destruction complete after 41s
+aws_instance.servers[1]: Still destroying... [id=i-07963daff9ba9cda7, 50s elapsed]
+aws_instance.servers[1]: Still destroying... [id=i-07963daff9ba9cda7, 1m0s elapsed]
+aws_instance.servers[1]: Destruction complete after 1m0s
+
+Destroy complete! Resources: 16 destroyed.
+bharathkumarraju@R77-NB193 Demo22_Terraform_loops_for-in %
+
