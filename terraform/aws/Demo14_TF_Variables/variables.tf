@@ -33,3 +33,13 @@ variable "key_pair" {
   default     = "bhararthtfcloud"
   sensitive   = true # only works with terraform14
 }
+
+variable "password" {
+  description = "password of 10 characters"
+  type = string
+  sensitive = true
+  validation {
+    condition = length(var.password) == 10
+    error_message = "Pasword must be ten characters exactly."
+  }
+}

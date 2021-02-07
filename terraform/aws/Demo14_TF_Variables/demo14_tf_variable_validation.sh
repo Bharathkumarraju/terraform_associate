@@ -1,19 +1,9 @@
-bharathkumarraju@R77-NB193 Demo14_TF_Variables % tfswitch
-✔ 0.14.6 *recent
-Switched terraform to version "0.14.6"
 bharathkumarraju@R77-NB193 Demo14_TF_Variables % terraform init
 
 Initializing the backend...
 
 Initializing provider plugins...
-- Finding latest version of hashicorp/aws...
-- Installing hashicorp/aws v3.27.0...
-- Installed hashicorp/aws v3.27.0 (signed by HashiCorp)
-
-Terraform has created a lock file .terraform.lock.hcl to record the provider
-selections it made above. Include this file in your version control repository
-so that Terraform can guarantee to make the same selections by default when
-you run "terraform init" in the future.
+- Reusing previous version of hashicorp/aws from the dependency lock file
 
 Terraform has been successfully initialized!
 
@@ -24,14 +14,28 @@ should now work.
 If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
-bharathkumarraju@R77-NB193 Demo14_TF_Variables % terraform refresh
-Empty or non-existent state file.
+bharathkumarraju@R77-NB193 Demo14_TF_Variables % terraform plan
+var.password
+  password of 10 characters
 
-Refresh will do nothing. Refresh does not error or return an erroneous
-exit status because many automation scripts use refresh, plan, then apply
-and may not have a state file yet for the first run.
+  Enter a value: hello
+
+
+Error: Invalid value for variable
+
+  on variables.tf line 37:
+  37: variable "password" {
+
+Pasword must be ten characters exactly.
+
+This was checked by the validation rule at variables.tf:41,3-13.
 
 bharathkumarraju@R77-NB193 Demo14_TF_Variables % terraform plan
+var.password
+  password of 10 characters
+
+  Enter a value: hellohello
+
 
 An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
@@ -229,40 +233,3 @@ can't guarantee that exactly these actions will be performed if
 bharathkumarraju@R77-NB193 Demo14_TF_Variables %
 
 
-
-bharathkumarraju@R77-NB193 Demo14_TF_Variables % terraform apply -auto-approve
-aws_security_group.web: Creating...
-aws_security_group.web: Creation complete after 2s [id=sg-0746fe7559f52e8ae]
-aws_instance.web: Creating...
-aws_instance.web: Still creating... [10s elapsed]
-aws_instance.web: Creation complete after 14s [id=i-01a44445d8f9bd618]
-aws_eip.web: Creating...
-aws_eip.web: Creation complete after 1s [id=eipalloc-0fea7cb8e6e7d1250]
-
-Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
-
-Outputs:
-
-instance_id = "i-01a44445d8f9bd618"
-public_ip = "54.255.226.142"
-security_group_id = "sg-0746fe7559f52e8ae"
-bharathkumarraju@R77-NB193 Demo14_TF_Variables %
-
-bharathkumarraju@R77-NB193 Demo14_TF_Variables % terraform destroy -auto-approve
-aws_eip.web: Destroying... [id=eipalloc-0fea7cb8e6e7d1250]
-aws_eip.web: Destruction complete after 1s
-aws_instance.web: Destroying... [id=i-01a44445d8f9bd618]
-aws_instance.web: Still destroying... [id=i-01a44445d8f9bd618, 10s elapsed]
-aws_instance.web: Still destroying... [id=i-01a44445d8f9bd618, 20s elapsed]
-aws_instance.web: Still destroying... [id=i-01a44445d8f9bd618, 30s elapsed]
-aws_instance.web: Still destroying... [id=i-01a44445d8f9bd618, 40s elapsed]
-aws_instance.web: Still destroying... [id=i-01a44445d8f9bd618, 50s elapsed]
-aws_instance.web: Still destroying... [id=i-01a44445d8f9bd618, 1m0s elapsed]
-aws_instance.web: Still destroying... [id=i-01a44445d8f9bd618, 1m10s elapsed]
-aws_instance.web: Still destroying... [id=i-01a44445d8f9bd618, 1m20s elapsed]
-aws_instance.web: Destruction complete after 1m22s
-aws_security_group.web: Destroying... [id=sg-0746fe7559f52e8ae]
-aws_security_group.web: Destruction complete after 1s
-
-Destroy complete! Resources: 3 destroyed.
-bharathkumarraju@R77-NB193 Demo14_TF_Variables %
