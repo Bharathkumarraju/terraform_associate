@@ -1,19 +1,4 @@
-provider "aws" {
-  region = "eu-west-2"
-}
-
 data "aws_availability_zones" "available" {}
-
-
-terraform {
-  backend "s3" {
-    bucket = "bharathkumar-tf-remote-state"
-    key = "dev/network/terraform.tfstate"
-    region = "ap-southeast-1"
-  }
-}
-
-
 
 resource "aws_vpc" "main" {
   cidr_block = var.vpc_cidr
@@ -102,7 +87,7 @@ resource "aws_route_table" "private_subnets" {
 }
 
 resource "aws_route_table_association" "private_routes" {
-  count = length(aws_subnet.private_subnets[*].id)
+  count = length(var.private_subnet_cidrs)
   route_table_id = aws_route_table.private_subnets[count.index].id
   subnet_id = aws_subnet.private_subnets[count.index].id
 }
