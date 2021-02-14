@@ -22,3 +22,22 @@ module "prod_server" {
   message =  "standalone server"
   subnet_id = module.bharath_vpc_production.public_subnet_ids[2]
 }
+
+
+module "server_loop_count" {
+  source = "../modules/aws_testserver"
+  count = length(module.bharath_vpc_production.public_subnet_ids)
+  name = "bharath-raju"
+  message = "Hello from subnet ${module.bharath_vpc_production.public_subnet_ids[count.index]} created nu COUNT Loop"
+  subnet_id = module.bharath_vpc_production.public_subnet_ids[count.index]
+}
+
+
+module "server_loop_foreach" {
+  source = "../modules/aws_testserver"
+  for_each = toset(module.bharath_vpc_production.public_subnet_ids)
+  name = "BD"
+  message = "Hello from subnet ${each.value} created by FOR_EACH Loop"
+  subnet_id = each.value
+  depends_on = [module.server_loop_count]
+}
