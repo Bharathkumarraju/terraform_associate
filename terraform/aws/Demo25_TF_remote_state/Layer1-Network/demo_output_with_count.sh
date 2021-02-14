@@ -145,3 +145,30 @@ vpc_cidr = 10.0.0.0/16
 vpc_id = vpc-07cba897c0f666d2a
 bharathkumarraju@R77-NB193 Layer1-Network %
 
+bharathkumarraju@R77-NB193 Layer1-Network % terraform destroy -auto-approve
+data.aws_availability_zones.available: Refreshing state...
+aws_vpc.main: Refreshing state... [id=vpc-07cba897c0f666d2a]
+aws_internet_gateway.main: Refreshing state... [id=igw-03a1e005c20d273dc]
+aws_subnet.public_subnets[0]: Refreshing state... [id=subnet-0072e9cce123b0b41]
+aws_subnet.public_subnets[1]: Refreshing state... [id=subnet-0ad8eee0042a65f64]
+aws_route_table.public_subnets: Refreshing state... [id=rtb-0830ddda9bd3a9a2e]
+aws_route_table_association.public_routes[0]: Refreshing state... [id=rtbassoc-093b5a08954e1c62b]
+aws_route_table_association.public_routes[1]: Refreshing state... [id=rtbassoc-024aa0acca93d1a7a]
+aws_route_table_association.public_routes[0]: Destroying... [id=rtbassoc-093b5a08954e1c62b]
+aws_route_table_association.public_routes[1]: Destroying... [id=rtbassoc-024aa0acca93d1a7a]
+aws_route_table_association.public_routes[1]: Destruction complete after 1s
+aws_route_table_association.public_routes[0]: Destruction complete after 1s
+aws_route_table.public_subnets: Destroying... [id=rtb-0830ddda9bd3a9a2e]
+aws_subnet.public_subnets[0]: Destroying... [id=subnet-0072e9cce123b0b41]
+aws_subnet.public_subnets[1]: Destroying... [id=subnet-0ad8eee0042a65f64]
+aws_subnet.public_subnets[0]: Destruction complete after 3s
+aws_subnet.public_subnets[1]: Destruction complete after 3s
+aws_route_table.public_subnets: Destruction complete after 3s
+aws_internet_gateway.main: Destroying... [id=igw-03a1e005c20d273dc]
+aws_internet_gateway.main: Still destroying... [id=igw-03a1e005c20d273dc, 10s elapsed]
+aws_internet_gateway.main: Destruction complete after 13s
+aws_vpc.main: Destroying... [id=vpc-07cba897c0f666d2a]
+aws_vpc.main: Destruction complete after 2s
+
+Destroy complete! Resources: 7 destroyed.
+

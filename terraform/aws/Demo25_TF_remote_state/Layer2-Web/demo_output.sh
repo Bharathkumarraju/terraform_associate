@@ -198,3 +198,21 @@ Outputs:
 
 web_server_public_ip = 3.9.175.181
 bharathkumarraju@R77-NB193 Layer2-Web %
+
+
+bharathkumarraju@R77-NB193 Layer2-Web % terraform destroy -auto-approve
+data.terraform_remote_state.vpc: Refreshing state...
+data.aws_ami.latest_amazon_linux: Refreshing state...
+aws_security_group.web: Refreshing state... [id=sg-03e1307eddd9dac68]
+aws_instance.web: Refreshing state... [id=i-07b0d6fd377720ea8]
+aws_instance.web: Destroying... [id=i-07b0d6fd377720ea8]
+aws_instance.web: Still destroying... [id=i-07b0d6fd377720ea8, 10s elapsed]
+aws_instance.web: Still destroying... [id=i-07b0d6fd377720ea8, 20s elapsed]
+aws_instance.web: Still destroying... [id=i-07b0d6fd377720ea8, 30s elapsed]
+aws_instance.web: Still destroying... [id=i-07b0d6fd377720ea8, 40s elapsed]
+aws_instance.web: Destruction complete after 46s
+aws_security_group.web: Destroying... [id=sg-03e1307eddd9dac68]
+aws_security_group.web: Destruction complete after 3s
+
+Destroy complete! Resources: 2 destroyed.
+bharathkumarraju@R77-NB193 Layer2-Web %
