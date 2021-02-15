@@ -134,4 +134,27 @@ bharathkumarraju@R77-NB193 Demo27_recreate_TF_resources %
 
 
 
+bharathkumarraju@R77-NB193 Demo27_recreate_TF_resources % terraform destroy -auto-approve
+aws_instance.node1: Destroying... [id=i-03cdb06f3e7a56864]
+aws_instance.node3: Destroying... [id=i-06a0cd7ac3f5cd268]
+aws_instance.node3: Still destroying... [id=i-06a0cd7ac3f5cd268, 10s elapsed]
+aws_instance.node1: Still destroying... [id=i-03cdb06f3e7a56864, 10s elapsed]
+aws_instance.node1: Still destroying... [id=i-03cdb06f3e7a56864, 20s elapsed]
+aws_instance.node3: Still destroying... [id=i-06a0cd7ac3f5cd268, 20s elapsed]
+aws_instance.node1: Destruction complete after 25s
+aws_instance.node3: Still destroying... [id=i-06a0cd7ac3f5cd268, 30s elapsed]
+aws_instance.node3: Still destroying... [id=i-06a0cd7ac3f5cd268, 40s elapsed]
+aws_instance.node3: Still destroying... [id=i-06a0cd7ac3f5cd268, 50s elapsed]
+aws_instance.node3: Still destroying... [id=i-06a0cd7ac3f5cd268, 1m0s elapsed]
+aws_instance.node3: Destruction complete after 1m10s
+aws_instance.node2: Destroying... [id=i-0ddafe07796dde758]
+aws_instance.node2: Still destroying... [id=i-0ddafe07796dde758, 10s elapsed]
+aws_instance.node2: Destruction complete after 16s
+
+Destroy complete! Resources: 3 destroyed.
+bharathkumarraju@R77-NB193 Demo27_recreate_TF_resources %
+
+
+
+
 
