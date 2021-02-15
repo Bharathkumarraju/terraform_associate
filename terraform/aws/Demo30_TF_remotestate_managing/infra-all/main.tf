@@ -13,8 +13,8 @@ data "aws_ami" "latest_amazon_linux" {
 }
 
 
-resource "aws_eip" "prod-ip1" {}
-resource "aws_eip" "prod-ip2" {}
+resource "aws_eip" "prod-ipaddress1" {}
+resource "aws_eip" "prod-ipaddress2" {}
 
 resource "aws_eip" "stag-ip1" {}
 resource "aws_eip" "stag-ip2" {}
