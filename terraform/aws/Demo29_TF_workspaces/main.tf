@@ -33,7 +33,7 @@ EOF
 }
 
 resource "aws_security_group" "web" {
-  name_prefix = "WebServer SG Prod"
+  name_prefix = "WebServer SG"
 
   ingress {
     from_port   = 80
